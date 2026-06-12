@@ -4,12 +4,13 @@
   "description": "A beginner-friendly Discord economy bot using discord.js v14 and MongoDB.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node server.js",
     "deploy": "node deploy-commands.js"
   },
   "dependencies": {
     "discord.js": "^14.15.3",
     "dotenv": "^16.4.5",
+    "express": "^5.2.1",
     "mongoose": "^8.4.1"
   },
   "author": "Antigravity",
