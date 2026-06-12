@@ -9,7 +9,7 @@ module.exports = {
   name: 'interactionCreate',
   async execute(interaction) {
     // ---- Dropdown menu handling for /cmd ----
-    if (interaction.isStringSelectMenu && interaction.customId === 'cmd_menu') {
+    if (interaction.isStringSelectMenu() && interaction.customId === 'cmd_menu') {
       const category = interaction.values[0];
       const commandsCollection = interaction.client.commands;
 
