@@ -4,7 +4,7 @@
   "description": "A beginner-friendly Discord economy bot using discord.js v14 and MongoDB.",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "npx prisma db push && node server.js",
     "deploy": "node deploy-commands.js"
   },
   "dependencies": {
