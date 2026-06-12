@@ -64,7 +64,7 @@ if (fs.existsSync(eventsPath)) {
   console.error(`Error: Events folder not found at ${eventsPath}`);
 }
 
-const connectDB = require("./database/db");
+const { connectDB } = require("./database/db");
 
 // Handle unhandled promise rejections to avoid bot crashing
 process.on("unhandledRejection", (reason, promise) => {

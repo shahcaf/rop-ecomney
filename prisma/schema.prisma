@@ -1,0 +1,31 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "cockroachdb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  userId      String @id
+  wallet      Int    @default(0)
+  bank        Int    @default(0)
+  prestige    Int    @default(0)
+  totalEarned Int    @default(0)
+  totalSpent  Int    @default(0)
+  lastDaily   Int    @default(0)
+  lastWork    Int    @default(0)
+  cooldowns   Json?
+
+  @@map("users")
+}
+
+model Inventory {
+  userId   String
+  itemId   String
+  quantity Int    @default(0)
+
+  @@id([userId, itemId])
+  @@map("inventory")
+}
